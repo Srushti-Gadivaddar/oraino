@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const ContributeSection = () => {
   return (
-    <section className="py-32 relative">
+    <section className="py-28 relative">
       <div className="glow-line mb-20" />
       <div className="container max-w-3xl mx-auto px-6">
         <p className="font-mono text-primary text-xs tracking-widest uppercase mb-4">Contribute</p>
