@@ -1,9 +1,18 @@
+/* ===========================
+   1️⃣ Import Google Fonts first
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ===========================
+   2️⃣ Tailwind Directives
+=========================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
+/* ===========================
+   3️⃣ Custom CSS Variables & Base Styles
+=========================== */
 @layer base {
   :root {
     --background: 220 25% 8%;
@@ -41,22 +50,27 @@
     --cyan: 188 70% 58%;
     --navy: 220 30% 12%;
   }
-}
 
-@layer base {
+  /* Apply border color to all elements */
   * {
     @apply border-border;
   }
 
+  /* Body base styles */
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 
+  /* Code font */
   code, .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
 }
+
+/* ===========================
+   4️⃣ Backgrounds & Gradients
+=========================== */
 
 /* Soft grid background */
 .grid-bg {
@@ -77,6 +91,7 @@
   );
 }
 
+/* Glowing horizontal line */
 .glow-line {
   height: 1px;
   background: linear-gradient(
@@ -89,6 +104,7 @@
   );
 }
 
+/* Hero gradient overlay */
 .hero-gradient {
   background: radial-gradient(
     ellipse 80% 50% at 50% -10%,
@@ -135,16 +151,12 @@
   border-color: hsl(var(--primary) / 0.3);
 }
 
-/* Animations */
+/* ===========================
+   5️⃣ Animations
+=========================== */
 @keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
